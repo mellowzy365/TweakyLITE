@@ -61,4 +61,4 @@ Built using **PowerShell + WPF GUI** for a modern and responsive interface.
 
 ## 🖼️ Interface Preview
 
-> Add your screenshot here after upload:
+![TweakyLITE Preview](assets/TweakyLITE.png)
