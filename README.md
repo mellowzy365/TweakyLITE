@@ -51,7 +51,7 @@ It is recommended to create a restore point before applying tweaks.
 
 ---
 
-## 💖 Support Development
+## 💖 Buy me a coffee ☕
 
 <p align="center">
   If you find this tool helpful and want to support further development:
