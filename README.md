@@ -62,3 +62,17 @@ Built using **PowerShell + WPF GUI** for a modern and responsive interface.
 ## 🖼️ Interface Preview
 
 ![TweakyLITE Preview](assets/TweakyLITE.png)
+
+---
+
+---
+
+## 💖 Support Development
+
+<p align="center">
+  If you find this tool helpful and want to support further development:
+  <br><br>
+  <a href="https://saweria.co/mellowzy">
+    <img src="https://img.shields.io/badge/Support%20on-Saweria-FF5F5F?style=for-the-badge&logo=buymeacoffee&logoColor=white" />
+  </a>
+</p>
