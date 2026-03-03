@@ -57,6 +57,13 @@ Built using **PowerShell + WPF GUI** for a modern and responsive interface.
 - Open Restore Point
 - One-click Restart
 
+### ⚠️ Disclaimer
+
+TweakyLITE modifies Windows system settings.
+
+Use at your own risk.
+It is recommended to create a restore point before applying tweaks.
+
 ---
 
 ## 🖼️ Interface Preview
