@@ -12,13 +12,7 @@
 
 ## ✨ Overview
 
-TweakyLITE is a lightweight Windows tweaking tool designed to:
-
-- Improve performance
-- Reduce background services
-- Optimize network settings
-- Clean temporary files
-- Manage power profiles
+TweakyLITE is a lightweight Windows tweaking tool designed to Windows tweaks, managing system services, controlling processes, and optimizing workflows
 
 Built using **PowerShell + WPF GUI** for a modern and responsive interface.
 
@@ -26,36 +20,19 @@ Built using **PowerShell + WPF GUI** for a modern and responsive interface.
 
 ## 🔥 Features
 
-### 🖥 System Information
-- Windows version detection
-- Secure Boot status
-- TPM detection
+| - | Feature | Description |
+|------|--------|-------------|
+| 🖥 | **System Informations** | Monitoring System Info. |
+| 🌐 | **Network Tools** | Optimizing and Enhancing Network Quality. |
+| ⚙️ | **Performance Tweaks** | Optimizing some usages for perfomance quality. |
+| 🧹 | **Clean Up** | Manage Storage and Bloatware. |
+| 🛠️ | **Game Tweaks** | Optimizing perfomance for better gaming. |
 
-### ⚙️ Performance Tweaks
-- Disable Telemetry
-- Disable Game Bar
-- Disable Superfetch
-- Disable Windows Update
-- Disable Error Reporting
+---
 
-### 🧹 Clean Up
-- Remove temporary files
-- Disable Reserved Storage
-- Remove NVIDIA telemetry (optional)
+## 💻 Compatibility
 
-### 🌐 Network Tools
-- Custom DNS (Primary + Secondary)
-- DNS Detection
-- Flush DNS
-- Quick access to Network Connections
-
-### ⚡ Power Management
-- Switch to Performance profile
-- Switch to Balanced profile
-
-### 🔄 System Tools
-- Open Restore Point
-- One-click Restart
+- Requires .NET Framework 4.8
 
 ### ⚠️ Disclaimer
 
