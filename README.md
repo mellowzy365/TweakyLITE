@@ -1,6 +1,6 @@
 # 🛠️ TweakyLITE
 
-> Lightweight Windows Optimization Toolkit built with PowerShell + WPF  
+> Lightweight Windows Optimization Toolkit built with PowerShell
 > Clean • Fast • Minimal • No Bloat
 
 ![Windows](https://img.shields.io/badge/Platform-Windows-blue)
