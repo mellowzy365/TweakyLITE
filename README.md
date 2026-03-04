@@ -30,10 +30,6 @@ Built using **PowerShell + WPF GUI** for a modern and responsive interface.
 
 ---
 
-## 💻 Compatibility
-
-- Requires .NET Framework 4.8
-
 ### ⚠️ Disclaimer
 
 TweakyLITE modifies Windows system settings.
