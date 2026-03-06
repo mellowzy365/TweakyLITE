@@ -12,7 +12,7 @@
 
 ## ✨ Overview
 
-TweakyLITE is a lightweight Windows tweaking tool designed to Windows tweaks, managing system services, controlling processes, and optimizing workflows
+TweakyLITE is a simple Windows Utility designed to Windows tweaks, managing system services, controlling processes, and optimizing workflows
 
 Built using **PowerShell**
 
