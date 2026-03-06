@@ -39,9 +39,9 @@ It is recommended to create a restore point before applying tweaks.
 
 ---
 
-## 🖼️ Interface Preview
+## 🖼️ Logo
 
-![TweakyLITE Preview](assets/TweakyLITE.png)
+![TweakyLITE Preview](assets/Splash.png)
 
 ---
 
