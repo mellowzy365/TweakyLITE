@@ -1,4 +1,4 @@
-﻿# ==========================
+# ==========================
 # TweakyLITE v1.04
 # ==========================
 Add-Type -AssemblyName PresentationFramework
@@ -995,38 +995,60 @@ function Start-GameTweak {
 
     $global:TargetProcessName = $processName
     $global:BoostedProcess = $null
+    $global:QoSName = "GameBoost_$processName"
 
     $txtGameStatus.Text = "Waiting for game process: $processName ..."
 
-    # DispatcherTimer untuk cek tiap 2 detik
+    # DispatcherTimer cek tiap 2 detik
     $timer = New-Object System.Windows.Threading.DispatcherTimer
     $timer.Interval = [TimeSpan]::FromSeconds(2)
 
     $timer.Add_Tick({
         try {
-            # Cari process yang match (case-insensitive, flexible)
             $proc = Get-Process | Where-Object { $_.ProcessName -like "*$global:TargetProcessName*" } | Select-Object -First 1
 
             if ($proc -and -not $global:BoostedProcess) {
-                # Game baru terdeteksi
+                # GAME Detected
+
+                # PRIORITY
                 try {
                     $proc.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::High
                 } catch {}
 
+                # NETWORK BOOST (QoS)
+                try {
+                    # Delete if exist (anti duplicate)
+                    Get-NetQosPolicy -Name $global:QoSName -ErrorAction SilentlyContinue | Remove-NetQosPolicy -Confirm:$false
+
+                    # Buat QoS baru
+                    New-NetQosPolicy -Name $global:QoSName `
+                        -AppPathNameMatchCondition $proc.Path `
+                        -NetworkProfile All `
+                        -PriorityValue8021Action 6 `
+                        -DSCPAction 46
+
+                } catch {}
+
                 $global:BoostedProcess = $proc
-                $txtGameStatus.Text = "Game detected: $($proc.ProcessName) → Tweak Enabled"
+                $txtGameStatus.Text = "Game detected: $($proc.ProcessName) → BOOST ON"
             }
             elseif (-not $proc -and $global:BoostedProcess) {
-                # Game ditutup
+                # ❌ GAME CLOSED
+
+                # Reset priority
                 try {
                     $global:BoostedProcess.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::Normal
                 } catch {}
 
-                $txtGameStatus.Text = "Game closed"
+                # Hapus QoS
+                try {
+                    Remove-NetQosPolicy -Name $global:QoSName -Confirm:$false
+                } catch {}
+
+                $txtGameStatus.Text = "Game closed → BOOST OFF"
                 $global:BoostedProcess = $null
             }
             elseif (-not $proc) {
-                # Masih menunggu game
                 $txtGameStatus.Text = "Waiting for game process: $processName ..."
             }
 
